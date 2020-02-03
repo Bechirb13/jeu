@@ -1,0 +1,128 @@
+#game {
+  position: relative;
+
+  width: 100%;
+  height: 80vh;
+  padding-top: 3px;
+
+  background: url("img/back.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+#score {
+  float: right;
+  font-size: 1.3rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.button {
+  color: #334;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: rgb(236, 177, 99);
+  padding: .5rem 1rem;
+  line-height: 1.9rem;
+  border-radius: .25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  text-align: center;
+  transition: all .2s;
+}
+
+#start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#start:hover{
+  box-shadow: .15rem .15rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.hide{
+  display: none;
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100px;
+
+  background: url("img/ground.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+#player {
+  position: absolute;
+  bottom: 400px;
+  left: 400px;
+
+  width: 100px;
+  height: 48px;
+
+  background: url("img/plane.png");
+  background-size: contain;
+
+  transition: 2s;
+  transition-timing-function: ease-in;
+}
+
+.eagle {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+
+  width: 60px;
+  height: 60px;
+
+  background: url("img/eagle.png");
+  background-size: cover;
+}
+
+#gameOverMenu
+{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -100%);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgb(209, 10, 16);
+  font-weight: 600;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 5px rgba(58, 51, 48, 0.52);
+  -webkit-transition: all 150ms ease-in;
+  -ms-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+  visibility: hidden;
+}
+
+#gameOverMenu.show
+{
+  visibility: visible;
+  z-index: 2;
+  -webkit-transition: all 150ms ease-in;
+  -ms-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+  font-size: 3.3rem;
+}
+
+.ball {
+  position: absolute;
+  bottom: 120px;
+  left: 500px;
+  width: 17px;
+  height: 7px;
+  background-color: #c51b0b;
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgba(213, 0, 0, 0.53);
+}
